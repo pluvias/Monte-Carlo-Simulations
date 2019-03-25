@@ -28,8 +28,7 @@ def metropolis_hastings(samples, p, a, b, sigma=1):
     Then, with some probability, the candidate is either accepted
     (in which case the candidate value is used in the next iteration) or rejected
     (in which case the candidate value is discarded, and current value is reused in the next iteration)
-    https://en.wikipedia.org/wiki/Metropolis-Hastings_algorithm
-
+    
     :param samples: number of samples
     :param p: a target distribution with parameters a, b to sample from
     :param sigma: standard deviation of a normal distribution
