@@ -1,4 +1,5 @@
 # Simulating the triangular distribution with Metropolis-Hastings algorithm.
+# Compared with the simple simulation using formula for generating random variables.
 
 import numpy as np
 from scipy.stats import norm
@@ -10,7 +11,7 @@ def triangular(q, alpha, beta): return (2*(1-np.abs(alpha+beta-2*q)/(beta-alpha)
 
 
 N = 1000  # Sample length
-alpha, beta = 16, 36  # Parameters
+alpha, beta = 16, 36  # Parameters. Given: (betta-alpha) > 0.
 X = []
 x = np.linspace(alpha, beta, 1000)
 
