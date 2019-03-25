@@ -14,7 +14,7 @@ X = zeros(1,N); % Array for random variables.
 % Divide the range into 1000 points:
 x = linspace(alpha,betta,1000);
 
-% Count the density for each x:
+% Compute density for each x:
 F = f(x);
 
 for i=1:N
