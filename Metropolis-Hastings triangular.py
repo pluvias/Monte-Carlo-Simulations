@@ -60,7 +60,15 @@ def metropolis_hastings(samples, p, a, b, sigma=1):
 
 Y = metropolis_hastings(N, triangular, alpha, beta)
 
-fig, ax = plt.subplots(1, 2)
-ax[0].hist(X, density=True, bins=25, color='C0')
-ax[1].hist(Y, density=True, bins=25, color='C1')
+
+plt.figure(1)
+plt.subplot(211)
+n, bins, patches = plt.hist(X, 50, density=1, facecolor='g')
+plt.title('Formula')
+plt.grid(True)
+
+plt.subplot(212)
+n, bins, patches = plt.hist(Y, 50, density=1, facecolor='r')
+plt.title('Metropolis-Hastings')
+plt.grid(True)
 plt.show()
